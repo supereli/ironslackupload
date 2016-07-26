@@ -32,7 +32,6 @@ def pullCurrentSlackEmojees():
    querystring = {"token":payloaddict['SLACK_API_TOKEN']}
    headers = {
       'cache-control': "no-cache"
-#     'postman-token': "31c4fa00-1914-c056-8788-9c5beb8a4240"
     }
    response = requests.request("GET", url, headers=headers, params=querystring)
    slackDict = json.loads(response.text)
